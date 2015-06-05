@@ -1,0 +1,8 @@
+* Om Counter
+A division of YOLO Counter Industries.
+* Development
+** Run lein autobuild process
+#+BEGIN_SRC sh
+  $ lein cljsbuild auto dev
+#+END_SRC
+** Open the index.html page
