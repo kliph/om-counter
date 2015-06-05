@@ -1,0 +1,24 @@
+body {
+  font-size: 3em;
+}
+
+h1 {
+  font-size: 75%;
+}
+
+.counter {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+button {
+  font-size: 80%;
+}
+
+.decrement-button {
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
