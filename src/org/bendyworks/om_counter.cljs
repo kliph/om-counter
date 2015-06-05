@@ -9,9 +9,15 @@
     om/IRender
     (render [_]
       (apply dom/div nil
-         [(dom/button #js {:className "inc-button"} "up")
-         (dom/div #js {:className "counter"} (:counter app) )
-         (dom/button #js {:className "dec-button"} "down")]))))
+             [(dom/button #js {:className "increment-button"
+                               :onClick (fn [e]
+                                          (om/transact! app :counter inc))}
+                          "⇮")
+              (dom/div #js {:className "counter"} (:counter app))
+              (dom/button #js {:className "decrement-button"
+                               :onClick (fn [e]
+                                          (om/transact! app :counter dec))}
+                          "⇮")]))))
 
 (om/root counter-view app-state
          {:target (.getElementById js/document "app")})
